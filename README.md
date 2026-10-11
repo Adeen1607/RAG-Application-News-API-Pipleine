@@ -61,3 +61,25 @@ On Windows PowerShell, activate with `.venv\Scripts\Activate.ps1`.
 ## Security
 
 Configuration is read from environment variables. Never place credentials in notebooks, source files, screenshots, outputs, or commit messages. If a credential is ever committed, revoke it immediately; removing it from the latest file does not remove it from Git history.
+
+
+## Rebuild the reading edition
+
+```bash
+python -m pip install -r requirements-research.txt
+python scripts/build_research_site.py
+```
+
+This renders saved notebook outputs without rerunning model training or external APIs. To refresh findings, run the analysis commands above first, update `reports/research-findings.md`, and rebuild.
+
+<!-- research-edition:start -->
+## Research edition
+
+[Research report and final visual results](research/report.md) · [Browser-ready notebook catalogue](research/notebooks.html)
+
+The historical notebook demonstrates construction of a metadata vector index and one generated answer. **No numerical evaluation is available.** The saved answer includes details unsupported by the title/author-only context; treat it as a grounding failure example, not a factual result or demonstrated article summary.
+
+
+The `research/` folder contains a professional static reading edition. The Pages workflow deploys it after GitHub Pages is enabled with **GitHub Actions** as the publishing source. Intended URL: `https://adeen1607.github.io/RAG-Application-News-API-Pipleine/`. Deployment status must be checked in Actions before treating that address as live.
+
+<!-- research-edition:end -->

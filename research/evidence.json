@@ -1,0 +1,11 @@
+{
+  "repository": "Adeen1607/RAG-Application-News-API-Pipleine",
+  "review_date": "2026-10-11",
+  "evidence_note": "The historical notebook demonstrates construction of a metadata vector index and one generated answer. **No numerical evaluation is available.** The saved answer includes details unsupported by the title/author-only context; treat it as a grounding failure example, not a factual result or demonstrated article summary.\n",
+  "inputs": [
+    {
+      "path": "news API RAG Pipeline.ipynb",
+      "sha256": "541daba4299a6d33637c85c1c64c06bf19dfe09e3bbca41c5470e95db1698376"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+The historical notebook demonstrates construction of a metadata vector index and one generated answer. **No numerical evaluation is available.** The saved answer includes details unsupported by the title/author-only context; treat it as a grounding failure example, not a factual result or demonstrated article summary.

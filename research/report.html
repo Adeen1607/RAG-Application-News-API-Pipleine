@@ -1,0 +1,18 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>News Metadata Retrieval Prototype</title><link rel="stylesheet" href="style.css"></head><body><header><div><p class="meta">Mohammed Adeen Shaik · Research and coursework</p><h1>News Metadata Retrieval Prototype</h1><nav><a href="index.html">Overview</a><a href="report.html">Research report</a><a href="notebooks.html">Explained notebooks</a><a href="https://github.com/Adeen1607/RAG-Application-News-API-Pipleine">Source repository</a></nav></div></header><main><h1 id="news-metadata-retrieval-prototype">News Metadata Retrieval Prototype</h1>
+<p><strong>Author:</strong> Mohammed Adeen Shaik<br />
+<strong>Review date:</strong> 11 October 2026</p>
+<h2 id="research-question">Research question</h2>
+<p>Can titles and authors provide useful retrieval evidence, and where does generation exceed that evidence?</p>
+<h2 id="data-and-provenance">Data and provenance</h2>
+<p>The notebook uses a local CSV of news metadata; full article bodies are absent.</p>
+<p>Source materials are linked from the repository README. Input fingerprints are recorded in <a href="evidence.json">the evidence manifest</a> so a reader can identify the exact committed artifacts used in this review.</p>
+<h2 id="method-and-analytical-rationale">Method and analytical rationale</h2>
+<p>Title and author are formatted into strings, split into overlapping chunks, embedded and indexed in FAISS. A retriever requests five chunks before a legacy generation chain.</p>
+<h2 id="findings-and-interpretation">Findings and interpretation</h2>
+<p>The historical notebook demonstrates construction of a metadata vector index and one generated answer. <strong>No numerical evaluation is available.</strong> The saved answer includes details unsupported by the title/author-only context; treat it as a grounding failure example, not a factual result or demonstrated article summary.</p>
+<h2 id="limitations">Limitations</h2>
+<p>The saved answer contains claims beyond the indexed headline and author context, so it is not a verified research finding. There is no retrieval benchmark or grounded-answer evaluation. Legacy LangChain APIs may require migration. Never publish API keys.</p>
+<h2 id="reproduction">Reproduction</h2>
+<p>Use the setup commands and input contract in the <a href="https://github.com/Adeen1607/RAG-Application-News-API-Pipleine#readme">repository README</a>. Open the <a href="notebooks.html">notebook catalogue</a> for annotated code and saved outputs. Keep raw records and model binaries local; public reports contain aggregate results or source-embedded figures.</p>
+<h2 id="final-visual-results">Final visual results</h2>
+<p>No verified numerical result figure is available in the current evidence. This status is shown explicitly rather than substituting fabricated data.</p><footer>Evidence dates and limitations are documented in the report. Static pages display saved outputs; they do not execute Python, R, Streamlit or API calls.</footer></main></body></html>
