@@ -13,6 +13,8 @@ REQUIRED_COLUMNS = ["title", "author"]
 
 
 def validate_news(path: Path, output: Path | None = None) -> dict[str, int | float]:
+    if output is not None and path.resolve() == output.resolve():
+        raise ValueError("output path must differ from input path to preserve raw data")
     frame = pd.read_csv(path)
     missing_columns = sorted(set(REQUIRED_COLUMNS) - set(frame.columns))
     if missing_columns:
